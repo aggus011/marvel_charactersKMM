@@ -4,7 +4,7 @@ import com.example.trabajopracticotallerkmm.android.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.Response
 
-class PublicKeyInterceptor : Interceptor {
+/*class PublicKeyInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
         val url = request.url
@@ -13,4 +13,4 @@ class PublicKeyInterceptor : Interceptor {
 
         return chain.proceed(request.newBuilder().url(newUrl).build())
     }
-}
+}*/

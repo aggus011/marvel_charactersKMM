@@ -11,6 +11,14 @@ expect class Platform() {
 
 expect fun initLogger()
 
+expect fun initTestSuma():Int
+
+expect fun initTestResta():Int
+
+expect fun initTestMultiplicacion():Int
+
+expect fun initTestDivision():Float
+
 
 
 

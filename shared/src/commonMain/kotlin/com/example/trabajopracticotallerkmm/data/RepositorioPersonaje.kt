@@ -5,21 +5,21 @@ import com.example.trabajopracticotallerkmm.model.Characters
 import com.example.trabajopracticotallerkmm.model.CharactersRepository
 import io.github.aakira.napier.Napier
 import io.ktor.client.*
+import io.ktor.client.engine.cio.*
 import io.ktor.client.features.*
-import io.ktor.client.features.json.JsonFeature
+import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
 import io.ktor.client.features.logging.*
 import io.ktor.client.request.*
-import io.ktor.client.statement.*
-import io.ktor.http.*
-import io.ktor.http.HttpHeaders.Date
-import java.lang.System
+
 
 class RepositorioPersonaje : CharactersRepository {
 
-    private val httpClient = HttpClient() {
+    private val httpClient = HttpClient(CIO) {
         install(JsonFeature) {
-            val json = kotlinx.serialization.json.Json { ignoreUnknownKeys = true }
+            val json = kotlinx.serialization.json.Json{
+                ignoreUnknownKeys = true
+            }
             serializer = KotlinxSerializer(json)
         }
 
@@ -57,6 +57,8 @@ class RepositorioPersonaje : CharactersRepository {
             Characters(it.name, it.description, it.thumbnail.toUrl())
         }
     }
+
+
 
 
 

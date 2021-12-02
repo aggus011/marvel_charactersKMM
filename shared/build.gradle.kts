@@ -41,6 +41,7 @@ kotlin {
                 implementation("io.ktor:ktor-client-serialization:$ktorVersion")
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
 
+                implementation ("io.ktor:ktor-client-cio:$ktorVersion")
 
             }
         }
@@ -48,16 +49,12 @@ kotlin {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
+                implementation(kotlin("test"))
             }
         }
         val androidMain by getting {
             dependencies {
 
-                // Retrofit
-                val retrofitVersion = "2.9.0"
-                implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
-                implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
-                implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
             }
         }
         val androidTest by getting {
@@ -82,7 +79,7 @@ android {
         minSdkVersion(23)
         targetSdkVersion(31)
     }
-   /* buildTypes{
+/*    buildTypes{
         getByName("debug"){
             val localProperties = Properties()
             localProperties.load(FileInputStream(rootProject.file("local.properties")))
@@ -94,6 +91,10 @@ android {
     }*/
 
 }
+dependencies {
+
+}
+
 
 
 

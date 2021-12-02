@@ -19,7 +19,6 @@ class CharactersActivity : AppCompatActivity() {
 
     private lateinit var charactersAdapter: CharactersAdapter
 
-    //private var repo = RepositorioPersonaje()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +33,6 @@ class CharactersActivity : AppCompatActivity() {
             this.layoutManager = verticalLayoutManager
             this.addItemDecoration(VerticalSpaceItemDecoration(16))
         }
-
-
 
 
         // Listen to Retrofit response
