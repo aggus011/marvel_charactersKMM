@@ -41,7 +41,7 @@ kotlin {
                 implementation("io.ktor:ktor-client-serialization:$ktorVersion")
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
 
-                implementation ("io.ktor:ktor-client-cio:$ktorVersion")
+               // implementation ("io.ktor:ktor-client-cio:$ktorVersion")
 
             }
         }
@@ -54,7 +54,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-
+                implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
             }
         }
         val androidTest by getting {

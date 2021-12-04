@@ -5,7 +5,7 @@ import com.example.trabajopracticotallerkmm.model.Characters
 import com.example.trabajopracticotallerkmm.model.CharactersRepository
 import io.github.aakira.napier.Napier
 import io.ktor.client.*
-import io.ktor.client.engine.cio.*
+//import io.ktor.client.engine.cio.*
 import io.ktor.client.features.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
@@ -15,7 +15,7 @@ import io.ktor.client.request.*
 
 class RepositorioPersonaje : CharactersRepository {
 
-    private val httpClient = HttpClient(CIO) {
+    private val httpClient = HttpClient {
         install(JsonFeature) {
             val json = kotlinx.serialization.json.Json{
                 ignoreUnknownKeys = true

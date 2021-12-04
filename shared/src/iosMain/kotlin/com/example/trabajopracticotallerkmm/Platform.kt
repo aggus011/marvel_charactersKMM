@@ -21,13 +21,16 @@ actual fun initTestSuma(): Int {
 }
 
 actual fun initTestResta(): Int {
-    TODO("Not yet implemented")
+    val calculadora = Calculadora()
+    return calculadora.restar(7,3)
 }
 
 actual fun initTestMultiplicacion(): Int {
-    TODO("Not yet implemented")
+    val calculadora = Calculadora()
+    return calculadora.restar(5,5)
 }
 
 actual fun initTestDivision(): Float {
-    TODO("Not yet implemented")
+    val calculadora = Calculadora()
+    return calculadora.dividir(10F,2F)
 }
